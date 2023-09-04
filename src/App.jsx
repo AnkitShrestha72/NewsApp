@@ -17,7 +17,7 @@ export default class App extends Component {
   constructor(){
     super();
     this.state = {
-      mode : "light",
+      mode : "dark",
       setMode : this.setMode,
       toggleMode : this.toggleMode,
     }
@@ -25,7 +25,6 @@ export default class App extends Component {
 
     toggleMode = () => {    
       
-  
     if (this.mode === "light") {
      
       this.setMode("white");
