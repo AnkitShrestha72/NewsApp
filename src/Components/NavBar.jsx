@@ -1,15 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react'
 import {
   Link
 } from "react-router-dom";
 
-export class NavBar extends Component {
-  render() {
-    console.log("Hello World", this.props);
-    let { mode , toggleMode } = this.props;
+const NavBar = (props) => {
+ 
+    // console.log("Hello World", this.props);
+    let { mode , toggleMode } = props;
     return (
       <>
-        <nav className={`navbar navbar-expand-lg navbar-${mode} bg-${mode}`}>
+        <nav className={`navbar fixed-top navbar-expand-lg navbar-${mode} bg-${mode}`}>
   <div className="container-fluid">
     <Link className="navbar-brand" to="/">NewsMonkey</Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,7 +48,7 @@ export class NavBar extends Component {
         <button className="btn btn-outline-success" type="submit">Search</button>
       </form> */}
 
-<div className={`form-check form-switch text-${this.props.mode ==='light'?'dark': 'light'}`}>
+<div className={`form-check form-switch text-${mode ==='light'?'dark': 'light'}`}>
               <input
                 className="form-check-input"
                 type="checkbox"
@@ -70,6 +70,6 @@ export class NavBar extends Component {
       </>
     )
   }
-}
+
 
 export default NavBar
